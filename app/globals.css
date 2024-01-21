@@ -2,26 +2,192 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+:root{
+  --primary-color: rgb(209, 174, 52);
+  --secondary-color: rgb(154, 123, 15);
+  --third-color: rgb(245, 209, 78);
+  --fourth-color: rgb(134, 106, 4);
+  --links-color:  rgb(154, 123, 15);
+  font-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/*Esconde la scrollbar de Chrome safari y Opera*/
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.navcontainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 2%;
+  box-shadow: 0 1px 6px -1px rgba(245, 209, 78, 0.5), 0 2px 3px -2px rgba(245, 209, 78, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.alquiler{
+  background-position: 40% 0%;
+  background-image: url("/catedral.webp");
+}
+.chofer-privado{
+  background-position: 100% 23%;
+  background-image: url("/sala2.jpg");
+}
+
+.taxi{
+  background-position: 10% 73%;
+  background-image: url("/cat.webp");
+}
+
+.vtc{
+  background-position: 100% 0%;
+  background-image: url("/Sala1.jpg");
+}
+.transfer{
+  background-position: 40% 3%;
+  background-image: url("/salamancaPuente.jpg");
+}
+.contacto{
+  background-position: 100% 50%;
+  background-image: url("/uni.webp");
+}
+.navcontainer::before {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(50px);
+  
+  z-index: -1;
+}
+
+.logo{
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+.nav{
+  
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 300;
+  
+
+
+}
+
+
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  display: none;
+  cursor: pointer;
+}
+
+/* @media (max-width: 1024px){
+  .navcontainer {
+    
+  }
+} */
+
+@media (max-width: 1024px){
+  .icons {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 17.7rem;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    text-align: center;
+    box-shadow: 0 1px 6px -1px rgba(245, 209, 78, 0.5), 0 2px 3px -2px rgba(245, 209, 78, 0.3);
+    
+
+  }
+
+
+}
+
+/* Estilo para pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+  .hero-bg-image {
+    /* Centrar la imagen */
+    background-position: 40% 63%;
+    background-image: url("/heroMobile.png");
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 1023px) {
+  .hero-bg-image {
+    /* Ajustar la imagen para responsividad */
+    background-position: center;
+    background-image: url("/heroMobile.png");
+  }
+  .vtc{
+     background-position: 65% 23%;
+     background-image: url("/sala4.jpg");
+  }
+  .chofer-privado{
+    background-position: center;
+    background-image: url("/heroMobile.png");
+ }
+}
+
+.hero-bg-image2{
+  background-image: url("/salamancaPuente.jpg");
+
+
+
+}
+
+.line{
+  height: 0.1rem;
+  max-width: 100%;
+  border: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), orange, rgba(0, 0, 0, 0));
+}
+
+.custom-shadow {
+  box-shadow: 0 1px 6px -1px rgba(126, 34, 206, 0.5), 0 2px 3px -2px rgba(126, 34, 206, 0.3);
+}
+
+.custom-shadow2 {
+  box-shadow: 0 1px 6px -1px rgba(250, 247, 250, 0.5), 0 2px 3px -2px rgba(239, 238, 240, 0.3);
+}
+
+.cookies p{
+  margin-top: 40px;
+}
+
+.cookies li{
+  margin-top: 10px;
+}
+
+form span{
+  color: tomato;
+  padding-left: 8px;
+  font-size: small;
+}
+
+.privacityLink{
+  font-size: medium;
 }
