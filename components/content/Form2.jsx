@@ -71,11 +71,23 @@ const Form2 = () => {
             alert("Completa el captcha para enviar el mensaje")
         }
     }
+
+
+
+
+    
     return (
-        <div className="mx-[4%] md:mx-[8%] md:flex md:justify-center md:items-center md:gap-52 ">
-            <div className='   '>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.895925765939!2d-5.6517645235768!3d40.961858722281214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f260b0c8df677%3A0xcc8717ecc11e1685!2sRafael%20Iglesias%20Taxi%20VTC%20Salamanca%20Rafael%20Iglesias%20Taxi%20su%20Ch%C3%B3fer%20Personal!5e0!3m2!1ses!2ses!4v1705593474546!5m2!1ses!2ses" width="600" height="600" ></iframe>
-            </div>
+        <div className="mx-[8%] md:mx-[8%] grid md:grid-cols-2 md:justify-center md:items-center md:gap-52 mt-5">
+    <div className="my-8">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3012.8682672910372!2d-5.6541556!3d40.9624646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f398d17758067%3A0xf7acd85efa04d61e!2sTaxi%20Su%20Chofer%20Personal!5e0!3m2!1ses!2ses!4v1706110751627!5m2!1ses!2ses"
+      width="100%"
+      height="450"
+      allowfullscreen=""
+    ></iframe>
+  </div>
+
+
             <form onSubmit={handleSubmit(onSubmit)} className="grid ">
                 <h2 className='text-2xl font-semibold md:text-center'>Contacte con nosotros:</h2>
                 <label htmlFor="name">Nombre:</label>

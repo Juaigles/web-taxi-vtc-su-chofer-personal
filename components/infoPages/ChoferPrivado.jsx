@@ -5,7 +5,7 @@ import React from 'react'
 const ChoferPrivado = () => {
     return (
         <div >
-            <div className='mx-[4%] md:mx-[8%] my-8'>
+            <section  className='mx-[4%] md:mx-[8%] my-8'>
                 <div className='md:my-5'>
                     <h2 className='my-[4] text-2xl  font-semibold'>Chófer privado</h2>
                 </div>
@@ -18,8 +18,8 @@ const ChoferPrivado = () => {
                     <div >
                         <h3 className='font-semibold text-2xl'>Chófer privado para ejecutivos y empresas</h3>
                         <div className='text-justify'>
-                            <p className='my-8'>Es un tipo de servicio que ofrecemos de manera más exclusiva y más personalizada. Recogemos a los clientes donde nos indiquen y los llevamos al aeropuerto o a la estación de tren o autobuses, hacemos traslados por la ciudad e, incluso, damos la oportunidad de que contraten nuestro servicio por horas.</p>
-                            <p className='my-10'>En estas circunstancia, usted contará con un chófer privado solo y exclusivamente para usted. No tendrá que compartirlo con nadie más y permanecerá a su lado para los trayectos el tiempo que necesite. También cubrimos todo tipo de eventos, congresos y ferias.</p>
+                            <p className='my-8'>Nuestro servicio se distingue por su exclusividad y personalización. Nos adaptamos a sus necesidades: lo recogemos en la ubicación que nos indique y le proporcionamos traslados eficientes al aeropuerto, estación de tren o autobuses. Además, ofrecemos recorridos personalizados por la ciudad y la flexibilidad de contratar nuestros servicios por horas. Con nosotros, cada trayecto está diseñado para adaptarse perfectamente a su agenda y preferencias.</p>
+                            <p className='my-10'>En estas circunstancias, le ofrecemos la exclusividad de un chófer privado dedicado únicamente a usted. Disfrute de la privacidad y la comodidad de no tener que compartir su viaje, con la garantía de que su chófer estará a su completa disposición durante el tiempo que requiera. Además, nos especializamos en proporcionar transporte elegante para una variedad de eventos, incluyendo congresos y ferias, asegurando que su experiencia sea tan profesional como placentera.</p>
                             <p className='my-8'>Como bien sabe estamos en Salamanca aunque nos movemos a nivel nacional. La puntualidad es una de nuestras señas de identidad y que respetamos siempre.</p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const ChoferPrivado = () => {
                         <h3 className='font-semibold text-2xl'>Chófer para traslados al aeropuerto de Madrid</h3>
                         <div className='text-justify'>
 
-                            <p className='my-8'>Llevamos a nuestros clientes desde el lugar que nos indiquen hasta el aeropuerto. ¿Tiene previsto viajar? Llámenos si quiere estar en hora y no perder el avión. Este viaje lo hará usted solo o junto su familia o amigos con la compañía de su chófer y siempre en un vehículo cómodo y en el cual pueda llevar todas sus maletas y demás pertenencias consigo mismo, ya que disponemos de un vehículo de máxma capacidad</p>
+                            <p className='my-8'>En <strong>Su Chófer Personal</strong>, nos encargamos de transportar a nuestros clientes desde cualquier ubicación hasta el aeropuerto con puntualidad y eficiencia. Si planea viajar y desea asegurarse de llegar a tiempo para su vuelo, no dude en contactarnos.</p>
                             <p className='my-8'>Contrátenos. No solo ofrecemos comodidad, también seguridad y un buen trato en todos nuestros servicios.</p>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const ChoferPrivado = () => {
                         <Image src="/furgoEspalda.webp" width={900} height={700} alt='furgonetaTaxi' layout='responsive' className='md:p-2' />
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
 

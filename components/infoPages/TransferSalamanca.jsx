@@ -6,38 +6,36 @@ const TransferSalamanca = () => {
     return (
         <div className='mx-[4%] md:mx-[8%] '>
             <h2 className='mt-10 font-semibold text-2xl'>Servicio de transfer privado desde Salamanca a nivel nacional</h2>
-            <div className='text-justify'>
-                <p className='my-5'>En <Link href="/" className='text-[var(--secondary-color)] font-semibold'>Su Chófer Personal</Link>, nuestra empresa en <strong>Salamanca</strong>, no solo ofrecemos un <strong>servicio VTC</strong>, sino también servicio de transfer. Estamos <strong>disponible las 24 horas</strong>, es decir, todos nuestros clientes pueden contar con nosotros a cualquier hora y en cualquier día que ahí estaremos. Podemos llevarle a múltiples destinos. Contacte con nosotros para definir el viaje.</p>
+            <section className='text-justify'>
+                <p className='my-5'>En <Link href="/" className='text-[var(--secondary-color)] font-semibold'>Su Chófer Personal</Link>, nuestra empresa en <strong>Salamanca</strong>, no solo ofrecemos un <strong>servicio VTC</strong>, sino también servicio de transfer. Estamos <strong>disponible las 24 horas</strong>,todos los días, garantizamos nuestra presencia siempre que nos necesite. No importa el destino, estamos preparados para llevarle a donde necesite ir, adaptándonos a sus horarios y preferencias. Para planificar su viaje perfecto, solo tiene que ponerse en contacto con nosotros.</p>
                 <p className='my-5'>Toda nuestra labor la ofrecemos tanto a las personas particulares como a las empresas. Disponemos de <strong>vehículos de hasta 7 plazas</strong> para que puedan viajar tanto usted como su compañía sin problema alguno. Todos los coches que tenemos son de gran capacidad para que sus trayectos sean lo más cómodos posibles. Además, también llevamos a cabo traslados cortos o viajes de mayor distancia. Usted elige. Díganos qué es lo que necesita y así haremos.</p>
                
 
                     <Image src="/rafaChofer2.jpg" width={800} height={700} layout='responsive' alt='transfer' className='my-10' />
                
                 <h3 className='mt-6 font-semibold text-2xl'>¿Por qué elegirnos como su servicio de transfer en Salamanca?</h3>
-                <p className='my-5'>En la ciudad de Salamanca, contar con un servicio de transporte confiable y eficiente es esencial para los residentes y visitantes por igual. Y es aquí donde entra en juego el servicio de transfer en VTC de Rafael Iglesias.
+                <p className='my-5'>En el corazón de Salamanca, un servicio de transporte confiable y de alta calidad es una necesidad tanto para los residentes como para los visitantes. Aquí es donde Rafael Iglesias, con su sobresaliente servicio de VTC (vehículo de transporte con conductor), marca la diferencia. <br /><br />
 
-                    Rafael Iglesias es un conductor de VTC (vehículo de transporte con conductor) experimentado y profesional, que ha estado ofreciendo servicios de traslado en Salamanca durante varios años. Su enfoque se centra en brindar un servicio de alta calidad a sus clientes, lo que significa que siempre está dispuesto a ir más allá para garantizar que sus necesidades de transporte se satisfagan completamente.
+Rafael Iglesias, un conductor experimentado y dedicado, ha estado al frente de ofrecer servicios de transfer excepcionales en Salamanca durante años. Su compromiso no es solo cumplir, sino superar las expectativas de sus clientes, asegurándose de que cada aspecto de sus necesidades de transporte sea atendido con la mayor atención.
 
-                    El servicio de transfer de Rafael Iglesias es perfecto para aquellos que buscan un servicio de transporte confiable y personalizado. Ya sea que necesite trasladarse desde el aeropuerto de Salamanca a su hotel o viceversa, o que necesite transporte para un evento especial, Rafael estará allí para ayudarlo. Su flota de vehículos incluye una amplia variedad de opciones, desde sedanes hasta SUV, lo que significa que puede adaptarse a cualquier necesidad de transporte.
+Ya sea que necesite un traslado eficiente desde el aeropuerto de Salamanca a su hotel, o un transporte elegante para un evento especial, puede contar con la profesionalidad de Rafael. <br /> Su flota diversa, que incluye desde un monovolumen FORD custom, un Toyota Prius + y un Mercedes CLA 180, está perfectamente equipada para adaptarse a cualquier requerimiento.
 
-                    Además, Rafael Iglesias se asegura de que su servicio sea asequible y transparente. Sus tarifas son competitivas y no hay cargos ocultos adicionales. Incluso ofrece una tarifa fija para traslados desde el aeropuerto, lo que significa que no hay sorpresas en la factura final.
+Rafael Iglesias también se destaca por su transparencia y asequibilidad. Ofrece tarifas competitivas y claras, eliminando la preocupación de cargos ocultos, con una <strong>tarifa fija</strong> para traslados desde y hacia el aeropuerto, garantizando así una total claridad en los costos. <br /><br />
 
-                    Por último, pero no menos importante, Rafael Iglesias es un conductor profesional con una sólida reputación en la ciudad de Salamanca. Es amable, cortés y siempre se asegura de que sus clientes se sientan cómodos y seguros durante todo el viaje.
+Además, Rafael es conocido en Salamanca por su cordialidad y profesionalismo. Se dedica a crear un ambiente en el que los clientes se sientan relajados, seguros y bien atendidos en cada viaje.
 
-                    En resumen, si busca un servicio de transfer confiable y eficiente en Salamanca, no busque más allá del servicio de Rafael Iglesias. Con su flota de vehículos de alta calidad, tarifas asequibles y servicio personalizado, puede estar seguro de que estará en buenas manos.
-
-                    Nuestra máxima prioridad en el día a día es que los clientes realmente se sientan bien y vaya cómodos. No importa si el trayecto es largo o más corto, queremos siempre su satisfacción. Para ello contamos con conductores profesionales y muy experimentados en el transporte de pasajeros. En ese sentido puede estar muy tranquilo.</p>
+En resumen, si está en busca de un servicio de transfer en Salamanca que combine fiabilidad, calidad y una atención personalizada, el servicio de Rafael Iglesias es su mejor elección. Con vehículos de primer nivel, precios justos y un servicio al cliente insuperable, cada viaje promete ser una experiencia placentera y satisfactoria.</p>
                 <p className='my-10'>Otro punto que también cuidamos mucho es el estado de conservación de toda nuestra flota de vehículos. La revisamos con regularidad y, como ya hemos indicado anteriormente, todos nuestros coches son modernos y confortables. Esto lo hacemos así con el fin de poder asegurar su buen funcionamiento y para reducir, lo máximo posible, la aparición de cualquier problema. <Link href="/" className='text-[var(--secondary-color)] font-semibold'>¡Conózcanos!</Link></p>
-            </div>
-            <div className='bg-black m-4 h-[60vh] w-[47vw] text-white flex flex-col items-center justify-center text-left font-semibold text-2xl'>
+            </section>
+            <section className='bg-black m-4 h-[60vh] w-[47vw] text-white flex flex-col items-center justify-center text-left font-semibold text-2xl'>
                 <div className='mx-6 pb-4'>
-                    <p>Conozca nuestro servicio de taxi de Su Chófer Personal</p>
+                    <p>Descubra nuestro servicio de taxi de Su Chófer Personal</p>
                 </div>
                 <div className='mx-5 pt-4'>
                     <p>Llame al 679 551 515</p>
 
                 </div>
-            </div>
+            </section>
         </div>
     )
 }

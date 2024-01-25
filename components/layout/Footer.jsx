@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebookF, FaInstagram, FaMobile, FaFacebook } from 'react-icons/fa';
-import { MdPhone, MdEmail, MdLocationOn } from 'react-icons/md';
+import { FaMapMarkerAlt, FaWhatsapp, FaFacebookF, FaInstagram, } from 'react-icons/fa';
+import { MdPhone, MdEmail,} from 'react-icons/md';
 
 
 
@@ -18,32 +18,32 @@ const Footer = () => {
                         height={500}
                     />
                 </div>
-                <div className='ml-4 text-left md:text-2xl'>
+                <address  className='ml-4 text-left md:text-2xl'>
                     <h2 className='my-2'>CONTACTE CON NOSOTROS</h2>
                     <ul className=''>
 
                         <li className='flex mb-2 '><span className='mr-4'>
-                            <MdPhone size={30} />
+                            <MdPhone size={30} aria-hidden="true" />
                         </span><Link href="tel:+34679551515" className='text-[var(--secondary-color)] hover:text-[var(--primary-color)]'>679 551 515</Link></li>
                         <li className='flex mb-2 '><span className='mr-4'>
-                            <MdEmail size={30} />
+                            <MdEmail size={30} aria-hidden="true"/>
                         </span><Link href="mailto:vtcsuchoferpersonal@gmail.com" className='text-[var(--secondary-color)] hover:text-[var(--primary-color)]'>vtcsuchoferpersonal@gmail.com</Link></li>
                         <li className='flex mb-2 '><span className='mr-4'>
-                            <FaMapMarkerAlt size={30} />
+                            <FaMapMarkerAlt size={30} aria-hidden="true"/>
                         </span>37003 Salamanca, Salamanca</li>
                     </ul>
-                </div>
+                </address>
                 <div className='ml-4 text-left md:text-2xl'>
                     <h2 className='my-2'>REDES SOCIALES</h2>
                     <div className='grid grid-cols-3 ' >
                         <Link href="https://wa.me/34679551515" className='mt-2 text-[var(--secondary-color)] hover:text-[var(--primary-color)]'>
-                            <FaWhatsapp size={30} />
+                            <FaWhatsapp size={30} aria-hidden="true"/>
                         </Link>
                         <Link href="https://www.facebook.com/suchoferpersonal/" className='mt-2 text-[var(--secondary-color)] hover:text-[var(--primary-color)]'>
-                            <FaFacebookF size={30} />
+                            <FaFacebookF size={30} aria-hidden="true"/>
                         </Link>
                         <Link href="https://www.instagram.com/suchoferpersonal/" className='mt-2 text-[var(--secondary-color)] hover:text-[var(--primary-color)]'>
-                            <FaInstagram size={30} />
+                            <FaInstagram size={30} aria-hidden="true"/>
                         </Link>
 
                     </div>

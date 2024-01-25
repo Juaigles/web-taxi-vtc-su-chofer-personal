@@ -98,6 +98,53 @@ body::-webkit-scrollbar{
   cursor: pointer;
 }
 
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* Ratio 16:9 */
+  height: 0;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes animate-from-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-from-left {
+  animation: animate-from-left 1s ease-out;
+}
+
+@keyframes animate-from-down {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-from-down {
+  animation: animate-from-down 1s ease-out;
+}
+
+
 /* @media (max-width: 1024px){
   .navcontainer {
     

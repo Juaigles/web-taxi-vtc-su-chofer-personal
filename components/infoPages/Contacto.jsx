@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import React from 'react'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebookF, FaInstagram, FaMobile, FaFacebook } from 'react-icons/fa';
-import { MdPhone, MdEmail, MdLocationOn } from 'react-icons/md';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebook } from 'react-icons/fa';
+
 
 
 const Contacto = () => {
@@ -47,8 +47,8 @@ const Contacto = () => {
 
                     <div>
                         <h2 className='text-bold text-2xl my-6'>Contacto</h2>
-                        <p className='my-6'>Somos <Link href="/" className='text-[var(--secondary-color)] font-semibold'>En Su Chófer Personal</Link>, ofrecemos un servicio especializado en el transporte de viajeros en turismo, estamos ubicados en Salamanca, donde llevamos a cabo un servicio de chófer de calidad.</p>
-                        <p className='my-6 '>Contacte con nosotros. Estaremos encantados de recibirle.</p>
+                        <p className='my-6'>Somos <Link href="/" className='text-[var(--secondary-color)] font-semibold'>En Su Chófer Personal</Link>, ubicados en Salamanca, nos especializamos en brindar servicios de chófer de alta calidad. Contáctenos para experimentar un transporte excepcional adaptado a sus necesidades.</p>
+                        <p className='my-6 '>Contacte con nosotros. Estaremos encantados de atenderle.</p>
                     </div>
                     <div className='w-[70%] my-6'>
                             <h2 className='text-bold text-2xl md:mb-5 '>Ubicación</h2>
