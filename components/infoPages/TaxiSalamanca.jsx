@@ -15,9 +15,13 @@ const TaxiSalamanca = () => {
                 <p className='my-4'>Nuestra principal prioridad es asegurar el bienestar y la comodidad de nuestros clientes en cada viaje. Por eso contamos con un equipo de conductores altamente profesionales y experimentados en el transporte de pasajeros, garantizando así no solo un viaje seguro, sino también una experiencia de viaje excepcionalmente agradable y tranquila.</p>
                 <p className='my-6'>En <strong>Su Chófer Personal</strong>, prestamos especial atención al mantenimiento y estado óptimo de nuestra flota. Realizamos revisiones regulares para garantizar que cada uno de nuestros vehículos no solo se mantenga a la vanguardia en términos de modernidad y confort, sino que también funcione a la perfección. Este compromiso con la calidad y la fiabilidad es parte esencial de nuestro servicio, minimizando cualquier inconveniente durante su viaje. ¡Descubra la diferencia con nosotros. <Link href="/" className='text-[var(--secondary-color)] font-semibold'>¡Conózcanos!</Link></p>
                 </div>
+                <div className='flex justify-center'>
+
                 <Image src="/triomercedes.webp" width={800} height={800} alt='taxiSalamanca' />
+                </div>
             </section>
-            <section className='bg-black m-4 h-[60vh] w-[47vw] text-white flex flex-col items-center justify-center text-left font-semibold text-2xl'>
+            <article className='flex justify-center'>
+            <div className='bg-black m-4 h-[60vh] w-[47vw] text-white flex flex-col items-center justify-center text-left font-semibold text-2xl'>
                 <div className='mx-6 pb-4'>
                     <>Descubra nuestro servicio de taxi de Su Chófer Personal</>
                 </div>
@@ -25,7 +29,9 @@ const TaxiSalamanca = () => {
                     <p>Llame al 679 551 515</p>
 
                 </div>
-            </section>
+            </div>
+            </article>
+       
         </div>
     )
 }

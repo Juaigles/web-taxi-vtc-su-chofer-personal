@@ -11,7 +11,7 @@ export const metadata = {
 const contact = () => {
   return (
     <div>
-        <GenericHero imgUrl="contacto">CONTÁCTA CON NOSOTROS</GenericHero>
+        <GenericHero imgUrl="contacto">CONTACTA CON NOSOTROS</GenericHero>
         <Contacto/>
 
       <Banner/>
