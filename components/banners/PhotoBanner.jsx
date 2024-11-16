@@ -6,7 +6,7 @@ import { FaPhone } from 'react-icons/fa'
 const PhotoBanner = () => {
   return (
     <div className='bg-black text-white'>
-      <div className='grid grid-cols-2 gap-4 justify-center items-center px-10'>
+      <div className='grid md:grid-cols-2 gap-4 justify-center items-center p-10'>
         <div className='grid grid-cols-1'>
           <div className='flex flex-col text-center justify-center items-center px-8 '>
             <h2 className='text-2xl'>
@@ -16,7 +16,7 @@ Contrate el servicio de chófer privado que le ofrecemos en Su Chófer Personal,
           </div>
         </div>
         <div className='flex justify-center items-center '>
-          <Image src="/vehculo7.jpg" alt='coche' width={900} height={900} layout='responsive' className=''/>
+          <Image src="/vehculo7.jpg" alt='coche' width={900} height={900}  className=''/>
         </div>
       </div>
     </div>

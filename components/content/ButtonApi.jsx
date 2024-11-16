@@ -43,18 +43,20 @@ const ButtonApi = () => {
       <div className='grid md:grid-cols-2 gap-20 mx-[4%] md:mx-[8%]  '>
 <ObserverAnimations animationType='fade-right'>
 
-        <div className='w-full flex justify-center items-start mt-10'>
-          <Image src="/reviews2.png" width={1000} height={1000} className='border border-[var(--secondary-color)]' />
+        <div className='w-full max-w-[100%] flex justify-center items-start mt-10'>
+          <Image src="/reviews2.png" alt='reviews' width={1000} height={1000} className='border border-[var(--secondary-color)]' />
         </div>
 </ObserverAnimations>
 
           <section className='md:my-10'>
-            {reviews.slice(0, 4).map((review, index) => (
+            {reviews.slice(0, 5).map((review, index) => (
+                review.rating > 3 ?
               <article key={index} className='mb-10'>
                 <div className='flex gap-4 items-center  '>
                  
-
-                    <img src={review.profile_photo_url} alt="Foto del autor" className='w-16 h-16 ' />
+ 
+                <Image src={review.profile_photo_url} width={400} height={400} alt="Foto del autor" className='w-16 h-16 '/>
+                   
                   
 
                   <div className=' '>
@@ -68,7 +70,7 @@ const ButtonApi = () => {
 
                   <p className='mx-8 my-4 font-semibold'>{review.text}</p>
                 </div>
-              </article>
+              </article> : null
             ))}
           </section>
         

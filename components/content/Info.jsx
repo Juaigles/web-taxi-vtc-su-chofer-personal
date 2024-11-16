@@ -7,7 +7,7 @@ const Info = () => {
     return (
         <section className='w-full  text-slate-800 bg-slate-300' role='información'>
             <div className='p-8 text-[14px] md:text-[18xp] lg:text-2xl text-left md:text-center '>
-                <p>Ofrecemos un servicio exclusivo de Taxi VTC con choferes privados especializados en eventos como  <span className='font-bold'>despedidas de soltero, rutas de vinos, viajes a Barajas.</span> Siempre ofreciendo la maxima profesionalidad.</p>
+                <p>Ofrecemos un servicio exclusivo de Taxi VTC con choferes privados especializados en eventos como viajes al <span className='font-bold'>aeropuerto Barajas, despedidas de soltero, rutas de vinos.</span> Siempre ofreciendo la maxima profesionalidad.</p>
             </div>
             <div className='grid md:grid-cols-2 justify-center items-center pb-6 gap-8  text-center'>
                 <div className='flex justify-end   items-center md:pl-8 font-semibold'>

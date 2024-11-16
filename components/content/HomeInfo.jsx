@@ -1,17 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 import ObserverAnimations from '../layout/ObserverAnimations'
+import Link from 'next/link'
 
 const HomeInfo = () => {
     return (
         <section className='bg-black text-white '>
             <div className='grid md:grid-cols-2 gap-4 px-10 py-20 md:mx-[8%] '>
                 <article>
-                    
+
                     <h2 className='font-semibold text-2xl border border-[var(--primary-color)] h-20 flex justify-center items-center text-[var(--primary-color)]'>LA EMPRESA</h2>
                     <ObserverAnimations animationType='fade-right'>
 
-                    <div className='my-8'><Image src="/Anverso.png" width={800} height={500} className='w-full' alt='Imagen representativa de Su Chofer Personal' /></div>
+                        <div className='my-8'><Image src="/Anverso.png" width={800} height={500} className='w-full' alt='Imagen representativa de Su Chofer Personal' /></div>
                     </ObserverAnimations>
                 </article>
                 <aside>
@@ -27,8 +28,10 @@ const HomeInfo = () => {
                             En definitiva, nuestra filosofía es que no solo importa llegar a tu destino; se trata de disfrutar el viaje. Con <strong>Su Chófer Personal</strong>, cada viaje es una oportunidad para relajarte, disfrutar o simplemente sumergirte en la comodidad de nuestros vehículos. Contáctanos y haz de tu próximo viaje una experiencia única.
                         </p>
 
+<div className='bg-[var(--primary-color)] text-center rounded-xl my-8  custom-shadow h-full text-2xl p-5 w-50 hover:bg-[var(--secondary-color)] ' role='button'>
 
-                        <button className='bg-[var(--primary-color)] rounded-xl my-8  custom-shadow h-10 w-40 hover:bg-[var(--secondary-color)]' role='button'>RESERVA AHORA</button>
+                        <Link href="tel:+34679551515" className=''>RESERVA AHORA</Link>
+</div>
 
                     </div>
                 </aside>

@@ -32,7 +32,11 @@ const Form2 = () => {
             }
             setData()
 
-        } else {
+        }
+        else if (response.status==401) {
+
+        }
+         else {
             setCaptcha(false)
             alert('Verifica el captcha')
         }
@@ -83,7 +87,7 @@ const Form2 = () => {
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3012.8682672910372!2d-5.6541556!3d40.9624646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f398d17758067%3A0xf7acd85efa04d61e!2sTaxi%20Su%20Chofer%20Personal!5e0!3m2!1ses!2ses!4v1706110751627!5m2!1ses!2ses"
       width="100%"
       height="450"
-      allowfullscreen=""
+    
     ></iframe>
   </div>
 
@@ -120,7 +124,7 @@ const Form2 = () => {
                         pattern: {
                             //expresion regular para comprobar la validez del mail, 
                             //esperamos distintos caracteres alfanúmericos seguidos de un @, luego otro texto, un punto, y un texto final 1que puede ser de 2 a 4 caracteres
-                            value: /^[a-z0-9._%+-]+@[a-z0-9·-]+\.[a-z] {2,4}$/,
+                            value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                             message: "El tipo de correo introducido no es válido"
                         }
                     })} className="border my-1.5 p-2"

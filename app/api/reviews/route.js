@@ -14,7 +14,13 @@ async function handler(){
 
     try {
         const res = await axios(config);
-        console.log(res.data.result.reviews);
+        if (res.data.result && res.data.result.reviews) {
+            console.log(res.data.result.reviews);
+        } else {
+            console.log(res.data);
+            
+            console.log("No reviews available");
+        }
 
         return new Response(JSON.stringify(res.data.result), {
             headers: { 'Content-Type': 'application/json' },

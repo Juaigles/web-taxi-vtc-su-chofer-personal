@@ -22,22 +22,21 @@ const BlogPost = () => {
             <div className='flex justify-center items-center md:col-span-2 lg:col-span-1'>
                     <div className='px-5 w-full h-full flex flex-col justify-evenly text-center'>
                         <div>
-                            <p className='font-italic text-2xl my-10'>"El futuro del desplazamiento: Las VTC son más baratas y más practicas que el taxi convencional."</p>
+                            <p className='font-italic text-2xl my-10'>El futuro del desplazamiento: Las VTC son más baratas y más practicas que el taxi convencional.</p>
                         </div>
                         <ObserverAnimations animationType='jump'>
 
                         <div>
-                            <Link href=''>
-                                <button className='font-bold rounded inline-flex  items-center hover:text-[var(--secondary-color)]'>
+                            <Link href="/blog">
+                                <div  className='font-bold rounded inline-flex  items-center hover:text-[var(--secondary-color)]'>
                                     <span className='text-1xl  text-[#555] uppercase hover:text-[var(--secondary-color)]'>lee el artículo de Bárbara Gutiérrez</span>
-                                    <BsFillArrowRightCircleFill className='md:ml-2 text-2xl' />
-                                </button>
+                                    <BsFillArrowRightCircleFill className='ml-2  text-2xl' />
+                                </div>
                             </Link>
                         </div>
                         </ObserverAnimations>
                     </div>
                 </div>
-
             </div>
     </section>
   )
