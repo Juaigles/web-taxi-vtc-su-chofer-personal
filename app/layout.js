@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Providers } from "./Providers";
 import Whatsapp from "@/components/layout/Whatsapp";
 
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {/* <Whatsapp/> */}
           {children}
+          <SpeedInsights/>
           <Footer />
     
       </body>
