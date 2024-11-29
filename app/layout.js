@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import { Providers } from "./Providers";
 import Whatsapp from "@/components/layout/Whatsapp";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           {/* <Whatsapp/> */}
           {children}
           <SpeedInsights/>
+          <Analytics/>
           <Footer />
     
       </body>
