@@ -20,11 +20,12 @@ body::-webkit-scrollbar {
 
 .grecaptcha-badge {
 
-  transform: scale(0.8); /* Escala el tamaño */
-  transform-origin: bottom right; /* Fija el punto de referencia de la escala */
+  transform: scale(0.5); /* Escala el tamaño */
+ margin-right: 50px;
 z-index: 1000;
   opacity: 0.4; /* Reduce la opacidad para mayor discreción */
   transition: opacity 0.3s ease; /* Suaviza la transición */
+  
 }
 
 /* Estilo cuando el usuario pasa el mouse por encima */
