@@ -19,12 +19,10 @@ body::-webkit-scrollbar {
 }
 
 .grecaptcha-badge {
-  position: fixed !important; /* Asegura que siga fijo */
-  bottom: 70px !important; /* Ajusta la distancia desde abajo */
-  left:  1px !important; /* Ajusta la distancia desde la derecha */
-  transform: scale(0.4); /* Escala el tamaño */
-  transform-origin: bottom left; /* Fija el punto de referencia de la escala */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+  transform: scale(0.8); /* Escala el tamaño */
+  transform-origin: bottom right; /* Fija el punto de referencia de la escala */
+z-index: 1000;
   opacity: 0.4; /* Reduce la opacidad para mayor discreción */
   transition: opacity 0.3s ease; /* Suaviza la transición */
 }
@@ -33,9 +31,10 @@ body::-webkit-scrollbar {
 .grecaptcha-badge:hover {
   opacity: 1; /* Restaura la opacidad al interactuar */
   transform: scale(1); /* Escala el tamaño */
-  transform-origin: bottom left; /* Fija el punto de referencia de la escala */
+  transform-origin: bottom right; /* Fija el punto de referencia de la escala */
  
 }
+
 .wasapContainer {
   color: rgb(204, 197, 172);
   right: 20px;
