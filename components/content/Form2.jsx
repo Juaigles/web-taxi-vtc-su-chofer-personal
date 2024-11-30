@@ -1,12 +1,12 @@
 "use client"
 
-import { useForm, useState} from "react-hook-form";
+import { useForm, } from "react-hook-form";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
+
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import ReCaptchaProvider from "../banners/ReCaptchaProvider";
+
 
 const Form2 = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,32 +19,6 @@ const Form2 = () => {
      
  
     const onSubmit = async (data) => {
-   
-        const JSONdata = JSON.stringify(data);
-        const endpoint = '/api/contact';
-
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSONdata,
-        };
-
-        const response = await fetch(endpoint, options);
-        const result = await response.json();
-        if (result.error) {
-            // Handle error
-        } else {
-            handleSubmit
-            window.location.href = '/success';
-        }
-    
-    };
-
-    const handdleSubmit = async (e) => {
-        e.preventDefault();
-
         if(!executeRecaptcha){
             return;
         }
@@ -57,15 +31,37 @@ const Form2 = () => {
             body:JSON.stringify({token})
         })
 
-        const data = await response.json()
+        const verification = await response.json()
 
-        if(data.success){
-            console.log('reCAPTCHA verification success:', data);
-          onSubmit(e)
+        if(verification.success){
+            console.log('reCAPTCHA verification success:', verification);
+
+            const JSONdata = JSON.stringify(data);
+            const endpoint = '/api/contact';
+    
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSONdata,
+            };
+    
+            const response = await fetch(endpoint, options);
+            const result = await response.json();
+
+            if (!result.error) {
+                window.location.href = '/success';
+            } else {
+                alert("Error al enviar mensaje")
+            };
         }else{
             console.log('reCAPTCHA verification failed',data);
+
         }
-     }
+    }
+
+ 
 
 
     return (
@@ -79,7 +75,7 @@ const Form2 = () => {
             </div>
 
 
-            <form onSubmit={handdleSubmit} className="grid">
+            <form onSubmit={handleSubmit(onSubmit)} className="grid">
                 <h2 className="text-2xl font-semibold md:text-center">Contacte con nosotros:</h2>
                 <label htmlFor="name">Nombre:</label>
                 <input
