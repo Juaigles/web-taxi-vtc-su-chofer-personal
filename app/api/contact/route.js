@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 
 
 const dev_email = process.env.ASSISTANT_EMAIL 
-const destination_email = proces.env.DESTINATION_EMAIL
+const destination_email = process.env.DESTINATION_EMAIL
 const pass = process.env.EMAIL_PASS
 
 export async function POST(request) {
