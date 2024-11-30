@@ -1,42 +1,25 @@
-"use client";
+"use client"
 
-import { useForm } from "react-hook-form";
+import { useForm, useState} from "react-hook-form";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import ReCaptchaProvider from "../banners/ReCaptchaProvider";
 
 const Form2 = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [captcha, setCaptcha] = useState(false)
+    const {executeRecaptcha} = useGoogleReCaptcha();
     console.log(errors);
 
-    // const [captcha, setCaptcha] = useState(false);
 
-    // const onChange = async (token) => {
-    //     const response = await fetch('/api/captcha', {
-    //         method: 'POST',
-    //         body: JSON.stringify({ recaptchaResponse: token }),
-    //         headers: { 'Content-Type': 'application/json' }
-    //     });
-    //     const data = await response.json();
-    //     if (response.status == 200) {
-    //         const setData = () => {
-    //             setCaptcha(true);
-    //         };
-    //         setData();
-    //     } else if (response.status == 401) {
-    //         // Handle unauthorized response
-    //     } else {
-    //         // setCaptcha(false);
-    //         alert('Verifica el captcha');
-    //     }
 
-    //     console.log(data);
-    // };
-
+     
+ 
     const onSubmit = async (data) => {
-        // Temporary bypass for captcha validation
-        // console.log(captcha);
-        // if (captcha) {
+   
         const JSONdata = JSON.stringify(data);
         const endpoint = '/api/contact';
 
@@ -53,12 +36,37 @@ const Form2 = () => {
         if (result.error) {
             // Handle error
         } else {
+            handleSubmit
             window.location.href = '/success';
         }
-        // } else {
-        //     alert("Completa el captcha para enviar el mensaje");
-        // }
+    
     };
+
+    const handdleSubmit = async (e) => {
+        e.preventDefault();
+
+        if(!executeRecaptcha){
+            return;
+        }
+        const token = await executeRecaptcha("form_submit")
+        const response = await fetch('/api/captcha',{
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({token})
+        })
+
+        const data = await response.json()
+
+        if(data.success){
+            console.log('reCAPTCHA verification success:', data);
+          onSubmit(e)
+        }else{
+            console.log('reCAPTCHA verification failed',data);
+        }
+     }
+
 
     return (
         <div className="mx-[8%] md:mx-[8%] grid md:grid-cols-2 md:justify-center md:items-center md:gap-52 mt-5">
@@ -70,7 +78,8 @@ const Form2 = () => {
                 ></iframe>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="grid">
+
+            <form onSubmit={handdleSubmit} className="grid">
                 <h2 className="text-2xl font-semibold md:text-center">Contacte con nosotros:</h2>
                 <label htmlFor="name">Nombre:</label>
                 <input
@@ -90,7 +99,7 @@ const Form2 = () => {
                         },
                     })}
                     className="border my-1.5 p-2"
-                />
+                    />
                 {errors.name && <span>{errors.name.message}</span>}
                 <label htmlFor="email">Email:</label>
                 <input
@@ -106,7 +115,7 @@ const Form2 = () => {
                         },
                     })}
                     className="border my-1.5 p-2"
-                />
+                    />
                 {errors.email && <span>{errors.email.message}</span>}
                 <label htmlFor="tel">Teléfono:</label>
                 <input type="tel" {...register("tel")} className="border my-1.5 p-2" />
@@ -117,7 +126,7 @@ const Form2 = () => {
                         required: true,
                     })}
                     className="border my-1.5 p-2 h-32"
-                />
+                    />
                 {errors.message?.type == "required" && <span>Rellena este campo antes de enviar el formulario</span>}
 
                 <label htmlFor="privacityReaded">
@@ -129,11 +138,11 @@ const Form2 = () => {
                                 message: "Debes leer y aceptar los términos antes de continuar",
                             },
                         })}
-                    />
+                        />
                     <Link
                         href="/politica-de-privacidad"
                         className="ml-2 text-[var(--secondary-color)] hover:text-[var(--primary-color)]"
-                    >
+                        >
                         {" "}
                         He leído y aceptado la Política de Privacidad *
                     </Link>
@@ -147,12 +156,14 @@ const Form2 = () => {
                     </span>
                 </label>
 
-                {/* <ReCAPTCHA sitekey={siteKey} onChange={onChange} className="my-4" /> */}
+    
+                
                 <button
                     type="submit"
                     className="border my-4 w-full max-w-[40%] md:max-w-[30%] mx-auto text-white bg-black px-8 py-5 hover:bg-[var(--secondary-color)]"
-                >
+                    >
                     Enviar
+                
                 </button>
             </form>
         </div>

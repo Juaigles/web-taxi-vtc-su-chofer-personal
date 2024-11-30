@@ -65,7 +65,7 @@ const Footer = () => {
             <div className='flex justify-between m-5'  >
 
                 <p className='font-semibold text-[80%] text-center text-[var(--secondary-color)]'>© 2024 SU CHÓFER PERSONAL Todos los derechos reservados.</p>
-                <p className='text-[80%]'>Producido por JDigital</p>
+                <p className='text-[80%]'> <Link href="https://www.jotadev.info" className='hover:text-[var(--primary-color)]'>Producido por J.Iglesias (Jota Dev)</Link></p>
             </div>
         </footer>
     )

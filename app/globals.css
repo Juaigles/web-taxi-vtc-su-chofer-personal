@@ -4,22 +4,33 @@
 
 
 
-:root{
+:root {
   --primary-color: rgb(209, 174, 52);
   --secondary-color: rgb(154, 123, 15);
   --third-color: rgb(245, 209, 78);
   --fourth-color: rgb(134, 106, 4);
-  --links-color:  rgb(154, 123, 15);
+  --links-color: rgb(154, 123, 15);
   font-size: 16px;
 }
 
 /*Esconde la scrollbar de Chrome safari y Opera*/
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-.navcontainer{
-  color:  rgb(204, 197, 172);
+
+
+.wasapContainer {
+  color: rgb(204, 197, 172);
+  right: 20px;
+  bottom: 70px;
+  z-index: 99;
+  
+  position: fixed;
+}
+
+.navcontainer {
+  color: rgb(204, 197, 172);
   background-color: rgb(31, 29, 29);
   text-shadow: 0 1px 2px rgba(134, 106, 4, 0.4);
   position: fixed;
@@ -34,74 +45,80 @@ body::-webkit-scrollbar{
   z-index: 100;
 }
 
-.alquiler{
+.alquiler {
   background-position: 40% 0%;
   background-image: url("/catedral.webp");
 }
-.chofer-privado{
+
+.chofer-privado {
   background-position: 100% 23%;
   background-image: url("/sala2.jpg");
 }
 
-.taxi{
+.taxi {
   background-position: 10% 73%;
   background-image: url("/cat.webp");
 }
 
-.vtc{
+.vtc {
   background-position: 100% 0%;
   background-image: url("/Sala1.jpg");
 }
-.transfer{
+
+.transfer {
   background-position: 40% 3%;
   background-image: url("/salamancaPuente.jpg");
 }
-.contacto{
+
+.contacto {
   background-position: 100% 50%;
   background-image: url("/uni.webp");
 }
-.avion{
-  
+
+.avion {
+
   background-image: url("/avion.jpg");
   background-size: cover;
   background-position: center;
 }
+
 .navcontainer::before {
-  
- 
+
+
   content: '';
   top: 0;
   left: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-   background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, .1);
   backdrop-filter: blur(150px);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  
+
   z-index: -1;
 }
 
-.logo{
+.logo {
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
 
 }
-.nav{
-  
+
+.nav {
+
   font-size: 1.15rem;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 300;
-  
+
 
 
 }
 
 
-.icons{
+.icons {
   position: absolute;
   right: 5%;
   font-size: 2.8rem;
@@ -114,7 +131,8 @@ body::-webkit-scrollbar{
 .map-container {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%; /* Ratio 16:9 */
+  padding-top: 56.25%;
+  /* Ratio 16:9 */
   height: 0;
 }
 
@@ -127,7 +145,8 @@ body::-webkit-scrollbar{
 }
 
 .myImageContainer {
-  max-height: 400px; /* Puedes ajustar este valor según tus necesidades */
+  max-height: 400px;
+  /* Puedes ajustar este valor según tus necesidades */
 }
 
 @keyframes animate-from-left {
@@ -135,6 +154,7 @@ body::-webkit-scrollbar{
     transform: translateX(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -150,6 +170,7 @@ body::-webkit-scrollbar{
     transform: translateY(30%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -167,7 +188,7 @@ body::-webkit-scrollbar{
   }
 } */
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   .icons {
     display: inline-flex;
   }
@@ -175,7 +196,7 @@ body::-webkit-scrollbar{
   .nav {
     color: rgb(245, 209, 78);
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-    
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -185,7 +206,7 @@ body::-webkit-scrollbar{
     backdrop-filter: blur(150px);
     text-align: center;
     box-shadow: 0 1px 6px -1px rgba(245, 209, 78, 0.5), 0 2px 3px -2px rgba(245, 209, 78, 0.3);
-    
+
 
   }
 
@@ -208,24 +229,26 @@ body::-webkit-scrollbar{
     background-position: center;
     background-image: url("/heroMobile.png");
   }
-  .vtc{
-     background-position: 65% 23%;
-     background-image: url("/sala4.jpg");
+
+  .vtc {
+    background-position: 65% 23%;
+    background-image: url("/sala4.jpg");
   }
-  .chofer-privado{
+
+  .chofer-privado {
     background-position: center;
     background-image: url("/heroMobile.png");
- }
+  }
 }
 
-.hero-bg-image2{
+.hero-bg-image2 {
   background-image: url("/salamancaPuente.jpg");
 
 
 
 }
 
-.line{
+.line {
   height: 0.1rem;
   max-width: 100%;
   border: 0;
@@ -240,20 +263,20 @@ body::-webkit-scrollbar{
   box-shadow: 0 1px 6px -1px rgba(250, 247, 250, 0.5), 0 2px 3px -2px rgba(239, 238, 240, 0.3);
 }
 
-.cookies p{
+.cookies p {
   margin-top: 40px;
 }
 
-.cookies li{
+.cookies li {
   margin-top: 10px;
 }
 
-form span{
+form span {
   color: tomato;
   padding-left: 8px;
   font-size: small;
 }
 
-.privacityLink{
+.privacityLink {
   font-size: medium;
 }
