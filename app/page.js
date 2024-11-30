@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-    <Hero  >TAXI-VTC SALAMANCA SERVICIOS DE CHÓFER EN SALAMANCA</Hero>
+    <Hero  >TAXI-VTC SALAMANCA SERVICIOS DE CHÓFER</Hero>
       <Info/>
       <HomeInfo/>
       {/* <Featured/>  */}
