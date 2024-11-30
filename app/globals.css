@@ -18,7 +18,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
+.grecaptcha-badge {
+  bottom: 70px !important; /* Ajusta la distancia desde la parte inferior */
+  left: 0px !important; /* Ajusta la distancia desde el lado derecho */
+ 
+}
 
 .wasapContainer {
   color: rgb(204, 197, 172);
