@@ -10,7 +10,7 @@ import ReCaptchaProvider from "../banners/ReCaptchaProvider";
 
 const Form2 = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [captcha, setCaptcha] = useState(false)
+
     const {executeRecaptcha} = useGoogleReCaptcha();
     console.log(errors);
 
