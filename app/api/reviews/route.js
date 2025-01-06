@@ -15,6 +15,7 @@ async function handler(req) {
         // Realizar la solicitud a Google Places
         const res = await axios(config);
 
+        console.log(res.data.result.reviews);
         // Verificar si las reseñas y el rating están disponibles
         if (res.data.result && res.data.result.reviews) {
             const { reviews, rating } = res.data.result;
